@@ -20,8 +20,13 @@ public class MainController {
     @GetMapping("/test-result")
     public String showProducts(@RequestParam(defaultValue = "100") int limit, Model model) {
         List<RequestAd> products = service.parseAds(limit);
-        log.info("Загружено {} продуктов", products.size());
+
+        if (products.isEmpty()) {
+            log.warn("Список продуктов пустой, возможно произошла ошибка API");
+            model.addAttribute("errorMessage", "Не удалось загрузить продукты. Попробуйте позже.");
+        }
+
         model.addAttribute("products", products);
-        return "products"; // thymeleaf-шаблон products.html
+        return "products"; // thymeleaf-шаблон
     }
 }
