@@ -1,14 +1,17 @@
 package task.tynybekoddarmanbektesttask.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
+@Getter
+@Setter
 @AllArgsConstructor
-@Data
+@NoArgsConstructor
+@Builder
+@ToString
 public class RequestAd {
     private String image;
     private String title;
-    private String price;
-    private String city;
+    private double price;
+    private String category;
     private String date;
 }

@@ -1,9 +1,14 @@
 package task.tynybekoddarmanbektesttask.service;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
+import task.tynybekoddarmanbektesttask.dto.RequestAd;
 
-@Service
-@Slf4j
-public class ParserService {
+import java.io.IOException;
+import java.util.List;
+
+public interface ParserService {
+    /**
+     * Интерфейс парсера объявлений.
+     * Собирает необходимые данные с общего тела что приходит нам с Fakestore.
+     */
+    List<RequestAd> parseAds(int limit);
 }
