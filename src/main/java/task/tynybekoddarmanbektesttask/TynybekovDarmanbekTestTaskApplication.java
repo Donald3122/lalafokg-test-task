@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TynybekodDarmanbekTestTaskApplication {
+public class TynybekovDarmanbekTestTaskApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TynybekodDarmanbekTestTaskApplication.class, args);
+		SpringApplication.run(TynybekovDarmanbekTestTaskApplication.class, args);
 	}
 
 }
